@@ -1,0 +1,177 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming - My Hobby</title>
+    <style>
+      body {
+        background: linear-gradient(
+          90deg,
+          rgba(201, 8, 255, 1) 0%,
+          rgba(29, 118, 236, 1) 50%,
+          rgba(5, 217, 157, 1) 100%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid rgba(201, 8, 115, 0.4);
+        background: white;
+        font-size: 18px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: 150ms;
+      }
+      button:hover {
+        background: rgba(201, 8, 115, 0.4);
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+      .themeButton {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5px 8px;
+      }
+      .themeButton:hover {
+        background: white;
+        color: black;
+        cursor: pointer;
+        border-color: black;
+      }
+      .playstationLogoPicture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .playstationLogoPicture:hover {
+        filter: contrast(60%);
+        transform: scale(1.1);
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 15px;
+      }
+      .grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.2);
+      }
+      .dark {
+        background: black;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: rgba(201, 8, 115, 0.4);
+      }
+      .dark p {
+        color: white;
+      }
+      .dark h1 {
+        color: white;
+      }
+      .dark h2 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="themeButton">Change theme</button>
+    <div class="container">
+      <h1>Gaming</h1>
+      <h2>My favorite hobby</h2>
+      <a
+        href="https://en.wikipedia.org/wiki/Video_game_console"
+        target="_blank"
+      >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/028/288/039/non_2x/video-game-controller-with-bright-neon-light-streaks-computer-gamer-background-3d-octane-render-game-concept-ideas-ai-generative-free-photo.jpg"
+          alt=""
+          class="playstationLogoPicture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://image.coolblue.nl/624x351/content/94b9d7e38e388adaa7060d7a709e4355"
+          alt=""
+        />
+        <img
+          src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2023/08/best-dualsense-games-new-feature-image.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5"
+          alt=""
+        />
+
+        <img
+          src="https://content.ibuypower.com/cdn-cgi/image/width=1920,format=auto,quality=75/https://blog-admin.ibuypower.com/wp-content/uploads/2024/01/84-video-Y50rsCtcS_8-unsplash-1.jpg?v=b8aa4c79317c8dbbe73930c832bb1e251045d75d"
+          alt=""
+        />
+        <img
+          src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603118_640.jpg"
+          alt=""
+        />
+      </div>
+      <p>
+        Console gaming refers to playing video games on a dedicated device,
+        typically a home console like the PlayStation, Xbox, or Nintendo Switch,
+        which are designed to be connected to a TV. These consoles provide a
+        relatively straightforward gaming experience with pre-optimized hardware
+        and software for specific titles.
+      </p>
+      <br />
+      <a
+        href="https://en.wikipedia.org/wiki/Video_game_console"
+        target="_blank"
+      >
+        <strong>Read on Wikipedia</strong>
+      </a>
+      <button>Learn about console gaming</button>
+    </div>
+    <footer>Coded by BriAnna Shavers</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
